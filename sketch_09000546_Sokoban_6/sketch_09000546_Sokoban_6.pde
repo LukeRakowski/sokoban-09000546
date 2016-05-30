@@ -1,14 +1,25 @@
-// this version of the program will collison detection with multiple objects 
+// this version of the program handles the addition of walls to the mix via the use of an array
+
+ArrayList<Wall> listofwalls;
 
 
 
 void setup(){
- 
-  size(900, 500);
+
+// EXTRA PIXELS FOR PIXEL PERFECT ACCURACY IN DISPLAY 
+  
+  size(900, 501);
+
+  
+listofwalls = new ArrayList<Wall>();
+  
+drawStaticTiles();
+
   
 }
 
 void draw(){
+  
   
    // set the background colour so that screen gets refreshed with each update 
    
@@ -17,7 +28,7 @@ void draw(){
    // draw the game objects
    
   drawTiles();
-
+  
   // draw the debug screen
   
   debug();
