@@ -13,6 +13,14 @@ class StorageLocation extends Tile {
    
   }
   
+  void changeCrateColour(){
+    
+   
+   
+    
+  }
+  
+  
   int getStorageXPosition(){  
   
     return xPosition;

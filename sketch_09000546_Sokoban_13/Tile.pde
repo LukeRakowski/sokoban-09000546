@@ -1,8 +1,6 @@
 
 class Tile {
   
-  //colourfill, x position, y position, width, height
-  
   color tileFill;
   int xPosition;
   int yPosition;

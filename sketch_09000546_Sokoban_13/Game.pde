@@ -35,7 +35,6 @@ void drawTiles(){
   StorageLocation storage = listofstoragelocations.get(i);  
   
   storage.drawtile();
-  
   int storageXpos = storage.getStorageXPosition();
   int storageYpos = storage.getStorageYPosition();
   

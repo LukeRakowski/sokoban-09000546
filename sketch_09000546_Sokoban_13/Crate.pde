@@ -8,13 +8,18 @@ class Crate extends Tile{
   
  void drawtile(){
    
+     
      fill(tileFill);
      rect(xPosition, yPosition, TileWidth, TileHeight);   
   
   }
   
 
-  
+  void changeColor(color newFill){
+    
+    tileFill = newFill;
+    
+  }
 
 // move FUNCTION TAKES IN PLAYER X AND Y PARAMETERS
 
@@ -31,17 +36,25 @@ class Crate extends Tile{
 
     if(  (xPosition == storageXpos)  &&  (yPosition == storageYpos)  ){
       
-      println("A CRATE HAS BEEN PLACED IN STORAGE");
+      println("A CRATE HAS BEEN PLACED IN STORAGE " + millis());
       
-        for(int a = 0; a < listofcrates.size(); a = a + 1){
+      //  for(int a = 0; a < listofcrates.size(); a = a + 1){
    
-          Crate crate = listofcrates.get(a);  
+       //   Crate crate = listofcrates.get(a);  
           
           // CHANGE THE COLOUR OF THE CRATE
+          
+            if(  (xPosition == storageXpos)  &&  (yPosition == storageYpos)  ){
+            
+              // CURRENTLY WORKS AS A CHECK
+              
+          //  crate.changeColor(color(200));
             
             println("THIS CONDITION IS TRUE");
           
-          } 
+            }
+          
+       //   } 
       
      
     } 
