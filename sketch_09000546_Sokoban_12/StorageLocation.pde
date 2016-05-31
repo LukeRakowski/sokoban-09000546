@@ -6,7 +6,12 @@ class StorageLocation extends Tile {
     
   }
   
-  
+   void drawtile(){
+    
+   fill(tileFill);
+   rect(xPosition, yPosition, TileWidth, TileHeight);
+   
+  }
   
   
 }

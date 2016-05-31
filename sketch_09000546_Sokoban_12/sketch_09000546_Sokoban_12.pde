@@ -5,6 +5,8 @@ ArrayList<Wall> listofwalls;
 
 ArrayList<Crate> listofcrates;
 
+ArrayList<StorageLocation> listofstoragelocations;
+
 void setup(){
 
 // EXTRA PIXELS FOR PIXEL PERFECT ACCURACY IN DISPLAY 
@@ -16,6 +18,8 @@ size(900, 501);
 listofwalls = new ArrayList<Wall>();
 
 listofcrates = new ArrayList<Crate>();
+
+listofstoragelocations = new ArrayList<StorageLocation>();
   
 drawStaticTiles();
 

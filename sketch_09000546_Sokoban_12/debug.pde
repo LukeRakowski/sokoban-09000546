@@ -16,4 +16,8 @@ void debug(){
   text("Y position of player: ", 520, 60);
   text(playerPositionY, 680, 60);
 
+  text("Number of goals: ", 520, 85);
+  text(listofstoragelocations.size(), 680, 85);
+  
+
 }

@@ -38,8 +38,22 @@ Crate crateTwo = new Crate(color(0, 255, 0), 200, 150, 50, 50);
 //  wall.checkifplayerisbelowwall(boolean);
   
   }  
+ 
+// DISPLAY ALL OF THE STOARGE LOCS IN THE STORAGE LOC ARRAYLIST AS WELL AS THEIR FUNCTIONS
+
   
-// DISPLAY ALL OF THE CRATES IN THE CRATE ARRAYLIST AS WELL AS THEIR FUNCTIONS
+  for(int i = 0; i < listofstoragelocations.size(); i = i + 1){
+   
+  StorageLocation storage = listofstoragelocations.get(i);  
+  
+  storage.drawtile();
+  
+  
+  }  
+  
+//  println(listofstoragelocations.size());
+  
+// DISPLAY ALL OF THE CRATES IN THE CRATE ARRAYLIST AS WELL AS THEIR FUNCTIONS // DRAW ORDER STORAGE BENEATH THE CRATES
   
   for(int i = 0; i < listofcrates.size(); i = i + 1){
    
@@ -51,6 +65,9 @@ Crate crateTwo = new Crate(color(0, 255, 0), 200, 150, 50, 50);
   
   
   } 
+  
+
+  
 
    playerOne.drawtile(); 
 
@@ -60,10 +77,15 @@ Crate crateTwo = new Crate(color(0, 255, 0), 200, 150, 50, 50);
 
 void drawStaticTiles(){
   
+// DISPLAY 2 STORAGE LOCATIONS
+
+  listofstoragelocations.add(new StorageLocation(color(255, 255, 40), 200, 200, 50, 50));
+  listofstoragelocations.add(new StorageLocation(color(255, 255, 40), 400, 400, 50, 50));
+  
 // DISPLAY 2 CRATES  
   
-   listofcrates.add(new Crate(color(0, 255, 0), 300, 50, 50, 50));
-   listofcrates.add(new Crate(color(0, 255, 0), 200, 150, 50, 50));
+   listofcrates.add(new Crate(color(0, 255, 0), 200, 350, 50, 50));
+   listofcrates.add(new Crate(color(0, 255, 0), 200, 100, 50, 50));
   
 // MAKE A WALL OF WALL TILES, USED DIFFERENT COLOURS TO MAKE SURE THEY ARENT OVERLAPPING  
   
