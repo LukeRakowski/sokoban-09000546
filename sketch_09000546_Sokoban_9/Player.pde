@@ -23,6 +23,14 @@ class Player extends Tile {
   
 // GETTING THE X AND Y POSITION OF THE PLAYER FOR PASSING IT ON INTO CLASSES etc
   
+  void checkwallcollisions(int wallPositionX, int wallPositionY){
+    
+    
+    
+  }
+  
+  
+  
   int getPlayerXPosition(){  
   
     return xPosition;

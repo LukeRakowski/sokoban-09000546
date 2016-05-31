@@ -21,12 +21,12 @@ void drawTiles(){
   
   Wall wall = listofwalls.get(i); 
   wall.drawtile();
-  wall.restrictplayer(playerPositionX, playerPositionY);
+  wall.checkplayerandwallpositions(playerPositionX, playerPositionY);
 //  wall.checkifplayerisbelowwall(boolean);
   
   }
   
-  playerOne.drawtile();
+  playerOne.drawtile(); 
   crateOne.drawtile();
   crateTwo.drawtile();
   crateOne.move(playerPositionX, playerPositionY);

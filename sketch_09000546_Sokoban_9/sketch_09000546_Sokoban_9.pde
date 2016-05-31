@@ -1,4 +1,6 @@
 
+// WORKING WALL COLLISIONS
+
 ArrayList<Wall> listofwalls;
 
 void setup(){
@@ -18,7 +20,7 @@ drawStaticTiles();
 
 void draw(){
   
-  
+
 // SET THE BACKGROUND COLOUR SO THAT THE PICTURE CAN UPDATE WITH EACH REFRESH 
    
    background(255); 
