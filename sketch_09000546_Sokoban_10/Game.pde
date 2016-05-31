@@ -45,7 +45,8 @@ Crate crateTwo = new Crate(color(0, 255, 0), 200, 150, 50, 50);
   
   crate.drawtile();
   crate.move(playerPositionX, playerPositionY);  
-   
+  int crateXpos = crate.getCrateXPosition();
+  int crateYpos = crate.getCrateYPosition(); 
   } 
   
   playerOne.drawtile(); 
