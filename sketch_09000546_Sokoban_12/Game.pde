@@ -32,14 +32,14 @@ Crate crateTwo = new Crate(color(0, 255, 0), 200, 150, 50, 50);
   Wall wall = listofwalls.get(i); 
 //  wall.stopcrate(crateXpos, crateYpos);
   wall.drawtile();
-  wall.stopcrate();
+  wall.stopcrate(playerPositionX, playerPositionY);
   wall.checkplayerandwallpositions(playerPositionX, playerPositionY);
   
 //  wall.checkifplayerisbelowwall(boolean);
   
   }  
   
-// DISPLAY ALL OF THE CRATES IN THE CRATE ARRAYLIST  
+// DISPLAY ALL OF THE CRATES IN THE CRATE ARRAYLIST AS WELL AS THEIR FUNCTIONS
   
   for(int i = 0; i < listofcrates.size(); i = i + 1){
    
@@ -49,15 +49,6 @@ Crate crateTwo = new Crate(color(0, 255, 0), 200, 150, 50, 50);
   crate.move(playerPositionX, playerPositionY);  
   crate.getCrateXPosition();
   
-// MIGHT ACTUALLY WORK
-
-//  int crateXpos = crate.getCrateXPosition();
-//  int crateYpos = crate.getCrateYPosition(); 
-  
-// CHECKING THE VALUES ARE CORRECT  
-  
-//  println(crateXpos);
-//  println(crateYpos);
   
   } 
 
@@ -83,32 +74,32 @@ void drawStaticTiles(){
 
 
   
-  for(int i = 50; i < 450; i = i + 50){
-  
 // MAKE A ROW OF LEFT VERTICAL WALLS
-    
+      
+  for(int i = 50; i < 500; i = i + 50){
+
    listofwalls.add(new Wall(color(0, 0, 100),0, i, 50, 50));  
   }
   
-  for(int i = 50; i < 450; i = i + 50){
+// MAKE A ROW OF RIGHT VERTICAL WALLS  
   
-// MAKE A ROW OF RIGHT VERTICAL WALLS
+  for(int i = 0; i < 450; i = i + 50){
     
    listofwalls.add(new Wall(color(0, 0, 100),450, i, 50, 50));  
   }
-   
-   for(int i = 50; i < 450; i = i + 50){
-  
+
 // MAKE A ROW OF TOP HORIZONTAL WALLS
-    
+   
+   for(int i = 0; i < 450; i = i + 50){
+
    listofwalls.add(new Wall(color(0, 0, 255),i, 0, 50, 50));  
   } 
-  
-    for(int i = 50; i < 450; i = i + 50){
-  
+
 // MAKE A ROW OF BOTTOM HORIZONTAL WALLS
-    
-   listofwalls.add(new Wall(color(0, 0, 255),i, 450, 50, 50));  
+  
+    for(int i = 50; i < 500; i = i + 50){
+
+    listofwalls.add(new Wall(color(0, 0, 255),i, 450, 50, 50));  
   }   
   
 }

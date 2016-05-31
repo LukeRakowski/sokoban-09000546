@@ -64,7 +64,7 @@ class Wall extends Tile {
 
 
 
-void stopcrate(){
+void stopcrate(int playerX, int playerY){
 
 // GET ALL THE CRATES IN THE CRATE ARRAY
   
@@ -78,27 +78,87 @@ void stopcrate(){
     
 
     
-// CHECKING TO SEE IF THE CRATE IS GOING THROUGH THE WALL    
+// CHECKING TO SEE IF THE CRATE IS GOING THROUGH THE LEFT WALL    
   
-  if((crateXpos == xPosition) && (crateYpos == yPosition)){
-    
-   println("A CRATE HAS BEEN LOST IN DISPAIR"); 
+  if((crateXpos == xPosition) && (crateYpos == yPosition) && (keyCode == LEFT)){
 
 // TESTING CLAUSE FOR WHEN THE CRATE IS PUSHED INTO THE LEFT WALL 
 
   int newXpos = crateXpos + 50;
-  int newYpos = crateYpos + 0;    
-    
+  int newYpos = crateYpos;    
+
+// STOP THE CRATE FROM MOVING FURTHER LEFT    
       
-    crate.alterPosition(int(newXpos), int(newYpos));
+  crate.alterPosition(int(newXpos), int(newYpos));
+
+// STOP THE PLAYER FROM ADVANCING OVER THE CRATE
+
+  playerPositionX = playerPositionX + 50;
     
-    
+  playerOne.alterPosition(int(playerPositionX), int(playerPositionY));
     
   }
   
-
+// CHECKING TO SEE IF THE CRATE IS GOING THROUGH THE RIGHT WALL    
   
+  if((crateXpos == xPosition) && (crateYpos == yPosition) && (keyCode == RIGHT)){
 
+// TESTING CLAUSE FOR WHEN THE CRATE IS PUSHED INTO THE LEFT WALL 
+
+  int newXpos = crateXpos - 50;
+  int newYpos = crateYpos;    
+
+// STOP THE CRATE FROM MOVING FURTHER RIGHT   
+      
+  crate.alterPosition(int(newXpos), int(newYpos));
+    
+// STOP THE PLAYER FROM ADVANCING OVER THE CRATE
+
+  playerPositionX = playerPositionX - 50;
+    
+  playerOne.alterPosition(int(playerPositionX), int(playerPositionY));
+    
+  }
+  
+// CHECKING TO SEE IF THE CRATE IS GOING THROUGH THE TOP WALL    
+  
+  if((crateXpos == xPosition) && (crateYpos == yPosition) && (keyCode == UP)){
+
+// TESTING CLAUSE FOR WHEN THE CRATE IS PUSHED INTO THE TOP WALL 
+
+  int newXpos = crateXpos;
+  int newYpos = crateYpos + 50;    
+
+// STOP THE CRATE FROM MOVING FURTHER UP    
+      
+  crate.alterPosition(int(newXpos), int(newYpos));
+
+// STOP THE PLAYER FROM ADVANCING OVER THE CRATE
+
+  playerPositionY = playerPositionY + 50;
+    
+  playerOne.alterPosition(int(playerPositionX), int(playerPositionY));
+    
+  }
+  
+  if((crateXpos == xPosition) && (crateYpos == yPosition) && (keyCode == DOWN)){
+
+// TESTING CLAUSE FOR WHEN THE CRATE IS PUSHED INTO THE BOTTOM WALL 
+
+  int newXpos = crateXpos + 0;
+  int newYpos = crateYpos - 50;    
+
+// STOP THE CRATE FROM MOVING FURTHER DOWN    
+      
+  crate.alterPosition(int(newXpos), int(newYpos));
+
+// STOP THE PLAYER FROM ADVANCING OVER THE CRATE
+
+  playerPositionY = playerPositionY - 50;
+    
+  playerOne.alterPosition(int(playerPositionX), int(playerPositionY));
+    
+  }  
   
   
   } 
