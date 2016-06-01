@@ -2,6 +2,7 @@ int movementDirection;
 int listOfGoalsReached;
 
 
+
 // FUNCTION FOR DRAWING TILES WHICH DO NOT HAVE FIXED POSITIONS
 
 void drawTiles(){
@@ -39,7 +40,7 @@ void drawTiles(){
   int storageXpos = storage.getStorageXPosition();
   int storageYpos = storage.getStorageYPosition();
   
-  
+  getstoragevalues(storageXpos, storageYpos);
   
   }  
   
@@ -62,6 +63,13 @@ void drawTiles(){
    playerOne.drawtile(); 
 
 }
+
+void getstoragevalues(int storageXpos, int storageYpos){
+  
+  println(storageXpos + " STORAGE X");
+  
+}
+
 
 // FUNCTION FOR RENDERING TILES THAT WILL ONLY BE DRAWN ON SCREEN ONCE AS TO SAVE MEMORY
 

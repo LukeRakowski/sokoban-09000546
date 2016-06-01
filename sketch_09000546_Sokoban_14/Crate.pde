@@ -30,42 +30,25 @@ class Crate extends Tile{
     StorageLocation storage = listofstoragelocations.get(i);  
     
 // GET ALL OF THE STORAGE LOCATIONS   
-    
-    int storageXpos = storage.getStorageXPosition();
-    int storageYpos = storage.getStorageYPosition();
 
-    if(  (xPosition == storageXpos)  &&  (yPosition == storageYpos)  ){
+    int listofgoals = listofstoragelocations.size();
+
+    if(  (xPosition == storage.getStorageXPosition())  &&  (yPosition == storage.getStorageXPosition())  ){
       
       println("A CRATE HAS BEEN PLACED IN STORAGE " + millis());
-      
-      //  for(int a = 0; a < listofcrates.size(); a = a + 1){
-   
-       //   Crate crate = listofcrates.get(a);  
-          
-          // CHANGE THE COLOUR OF THE CRATE
-          
-            if(  (xPosition == storageXpos)  &&  (yPosition == storageYpos)  ){
-            
-              // CURRENTLY WORKS AS A CHECK
-              
-              //  crate.changeColor(color(200));
-            
+
             println("THIS CONDITION IS TRUE " + millis());
             
+              // TAKE AWAY POINT
+            
+              listofgoals--;
               
-          
-            }
-          
-       //   } 
-      
-     
-    } 
-    
+            } 
+            
+            println(listofgoals);
 
-  }     
-    
-    
-    
+    }     
+ 
   }
     
 
